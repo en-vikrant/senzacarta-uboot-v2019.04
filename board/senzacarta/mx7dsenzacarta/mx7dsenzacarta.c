@@ -1,7 +1,11 @@
-// SPDX-License-Identifier: GPL-2.0+
 /*
+ * Copyright (C) 2013 Freescale Semiconductor, Inc.
  * Copyright (C) 2019 SenzaCarta
  *
+ * Author: Fabio Estevam <fabio.estevam@freescale.com>
+ * Author: Vikrant A. P. <vikrant.ap@econote.in>
+ *
+ * SPDX-License-Identifier: GPL-2.0+
  */
 
 #include <asm/arch/clock.h>
@@ -379,14 +383,14 @@ static iomux_v3_cfg_t const epdc_disable_pads[] = {
 	MX7D_PAD_EPDC_DATA05__GPIO2_IO5,
 	MX7D_PAD_EPDC_DATA06__GPIO2_IO6,
 	MX7D_PAD_EPDC_DATA07__GPIO2_IO7,
-	MX7D_PAD_EPDC_DATA00__GPIO2_IO8,
-	MX7D_PAD_EPDC_DATA01__GPIO2_IO9,
-	MX7D_PAD_EPDC_DATA02__GPIO2_IO10,
-	MX7D_PAD_EPDC_DATA03__GPIO2_IO11,
-	MX7D_PAD_EPDC_DATA04__GPIO2_IO12,
-	MX7D_PAD_EPDC_DATA05__GPIO2_IO13,
-	MX7D_PAD_EPDC_DATA06__GPIO2_IO14,
-	MX7D_PAD_EPDC_DATA07__GPIO2_IO15,
+	MX7D_PAD_EPDC_DATA08__GPIO2_IO8,
+	MX7D_PAD_EPDC_DATA09__GPIO2_IO9,
+	MX7D_PAD_EPDC_DATA10__GPIO2_IO10,
+	MX7D_PAD_EPDC_DATA11__GPIO2_IO11,
+	MX7D_PAD_EPDC_DATA12__GPIO2_IO12,
+	MX7D_PAD_EPDC_DATA13__GPIO2_IO13,
+	MX7D_PAD_EPDC_DATA14__GPIO2_IO14,
+	MX7D_PAD_EPDC_DATA15__GPIO2_IO15,
 	MX7D_PAD_EPDC_SDCLK__GPIO2_IO16,
 	MX7D_PAD_EPDC_SDLE__GPIO2_IO17,
 	MX7D_PAD_EPDC_SDOE__GPIO2_IO18,
@@ -403,15 +407,15 @@ static iomux_v3_cfg_t const epdc_disable_pads[] = {
 
 vidinfo_t panel_info = {
 	.vl_refresh = 85,
-	.vl_col = 1024,
-	.vl_row = 758,
-	.vl_pixclock = 40000000,
-	.vl_left_margin = 12,
-	.vl_right_margin = 76,
+	.vl_col = 1872,
+	.vl_row = 1404,
+	.vl_pixclock = 160000000,
+	.vl_left_margin = 32,
+	.vl_right_margin = 313,
 	.vl_upper_margin = 4,
-	.vl_lower_margin = 5,
-	.vl_hsync = 12,
-	.vl_vsync = 2,
+	.vl_lower_margin = 12,
+	.vl_hsync = 44,
+	.vl_vsync = 1,
 	.vl_sync = 0,
 	.vl_mode = 0,
 	.vl_flag = 0,
@@ -425,10 +429,10 @@ struct epdc_timing_params panel_timings = {
 	.sdoed_delay = 20,
 	.sdoez_width = 10,
 	.sdoez_delay = 20,
-	.gdclk_hp_offs = 524,
-	.gdsp_offs = 327,
+	.gdclk_hp_offs = 1042,
+	.gdsp_offs = 762,
 	.gdoe_offs = 0,
-	.gdclk_offs = 19,
+	.gdclk_offs = 91,
 	.num_ce = 1,
 };
 

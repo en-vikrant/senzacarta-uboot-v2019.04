@@ -1,8 +1,9 @@
-/* SPDX-License-Identifier: GPL-2.0+ */
 /*
  * Copyright 2019 SenzaCarta
  *
  * Configuration settings for the i.MX7D SENZACARTA board.
+ *
+ * SPDX-License-Identifier: GPL-2.0+ 
  */
 
 #ifndef __MX7D_SENZACARTA_CONFIG_H
